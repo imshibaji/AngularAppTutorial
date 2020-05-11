@@ -1,0 +1,80 @@
+<div class="footer">
+    <input 
+        class="my-slider"
+        type="range"
+        [min]="0"
+        [max]="state?.duration" step="0.01" 
+        [value]="state?.currentTime"
+        [disabled]="state?.error || currentFile.index === undefined"
+        (input)="change($event)"
+    />
+
+    <div class="container">
+        <div class="row">
+            <div class="play-section col-4 col-md-3">
+                <button pButton
+                    class="ui-button-raised ui-button-rounded"
+                    icon="pi pi-fw pi-step-backward-alt"
+                    [disabled]="isFirstPlaying()"
+                    (click)="previous()">
+                </button>
+
+                <button
+                    pButton
+                    class="ui-button-success ui-button-raised ui-button-rounded"
+                    icon="pi pi-fw pi-play" 
+                    style="font-size: 1.5em; border-radius: 50%; margin: 5px;"
+                    [disabled]="state?.error"
+                    (click)="play()" 
+                    *ngIf="!state?.playing">
+                </button>
+
+                <button 
+                    pButton
+                    class="ui-button-warning ui-button-raised ui-button-rounded"
+                    icon="pi pi-fw pi-pause" 
+                    style="font-size: 1.5em; border-radius: 50%; margin: 5px;"
+                    (click)="pause()" 
+                    *ngIf="state?.playing">
+                </button>
+
+                <button pButton
+                    class="ui-button-raised ui-button-rounded"
+                    icon="pi pi-fw pi-step-forward-alt"
+                    [disabled]="isLastPlaying()"
+                    (click)="next()">
+                </button>
+            </div>
+            
+            <div class="time-bar col-8 col-md-6 text-center">
+                <div class="display-box">
+                    <div>{{ state?.readableCurrentTime }} | {{ state?.readableDuration }}</div>
+                    <div>{{title}} | {{artist}}</div>
+                </div>
+            </div>
+            <div class="slider col-6 col-md-3 d-none d-sm-block">
+                <div class="row">
+                    <div class="col-6 text-right">
+                        <button *ngIf="!isVolume" pButton
+                            class="ui-button-success ui-button-raised ui-button-rounded"
+                            icon="pi pi-fw pi-volume-up" (click)="onVolume()">
+                        </button>
+                        <button *ngIf="isVolume" pButton
+                            class="ui-button-danger ui-button-raised ui-button-rounded"
+                            icon="pi pi-fw pi-volume-off" (click)="onVolume()">
+                        </button>
+                    </div>
+                    <div class="col-6" style="margin-top: 40px;">
+                        <p-slider 
+                            [(ngModel)]="val"
+                            [step]="0.01" 
+                            [min]="0" [max]="1"
+                            [style]="{'background-color': 'red'}" 
+                            (onChange)="volumeChange($event)">
+                        </p-slider>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

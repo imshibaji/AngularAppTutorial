@@ -1,0 +1,14 @@
+<div class="row">
+    <div *ngFor="let song of songs" class="col-md-3 midgap">
+        <p-card header="{{song.title}}" subheader="{{song.subtitle}}" styleClass="ui-card-shadow">
+            <p-header>
+                <img src="Card" src="{{song.img}}">
+            </p-header>
+            <div>{{song.details}}</div>
+            <p-footer>
+                <button pButton type="button" label="Play" icon="pi pi-play" 
+                style="width: 100%; display: block;"></button>
+            </p-footer>
+        </p-card>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.top-menu{
+    position: fixed;
+    height: 65px;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+    border-bottom: 1px solid #ccc;
+}
+
+.main{
+    padding-top: 65px;
+    padding-bottom: 100px;
+    background-color: #ccc;
+}
+.my-submenu{
+    height: 74.6vh;
+    background-color: #3f3f3f;
+    padding: 0px;
+    overflow: scroll;
+}

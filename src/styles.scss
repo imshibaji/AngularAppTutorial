@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+body .ui-menubar{
+    // background-color: red;
+    padding: 5px;
+}
+// body .ui-menubar .ui-menuitem-link .ui-menuitem-icon,
+// body .ui-menubar .ui-menuitem-link,
+// body .ui-menubar .ui-menuitem-link .ui-menuitem-text{
+//     color: yellow;
+// }
+body .ui-menu .ui-menuitem-link.ui-menuitem-link-active .ui-menuitem-text, 
+body .ui-menubar .ui-menuitem-link.ui-menuitem-link-active .ui-menuitem-text, 
+body .ui-tieredmenu .ui-menuitem-link.ui-menuitem-link-active .ui-menuitem-text, 
+body .ui-contextmenu .ui-menuitem-link.ui-menuitem-link-active .ui-menuitem-text, 
+body .ui-megamenu .ui-menuitem-link.ui-menuitem-link-active .ui-menuitem-text, 
+body .ui-slidemenu .ui-menuitem-link.ui-menuitem-link-active .ui-menuitem-text,
+
+body .ui-menu .ui-menuitem-link.ui-menuitem-link-active .ui-menuitem-icon, 
+body .ui-menubar .ui-menuitem-link.ui-menuitem-link-active .ui-menuitem-icon, 
+body .ui-tieredmenu .ui-menuitem-link.ui-menuitem-link-active .ui-menuitem-icon, 
+body .ui-contextmenu .ui-menuitem-link.ui-menuitem-link-active .ui-menuitem-icon, 
+body .ui-megamenu .ui-menuitem-link.ui-menuitem-link-active .ui-menuitem-icon, 
+body .ui-slidemenu .ui-menuitem-link.ui-menuitem-link-active .ui-menuitem-icon{
+    color: black;
+}
+body .ui-corner-all{
+    border-radius: 0px;
+}
